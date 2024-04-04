@@ -1,0 +1,47 @@
+@font-face {
+  font-display: swap;
+  font-family: "GothaProBol";
+  src: local('Inter'), url("../fonts/GothaProBol.woff"), url("../fonts/GothaProBol.woff2");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "MuseoSansCyrl";
+  src: local('MuseoSansCyrl'), url("../fonts/MuseoSansCyrl-300.woff"), url("../fonts/MuseoSansCyrl-300.woff2");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "MuseoSansCyrl";
+  src: local('MuseoSansCyrl'), url("../fonts/MuseoSansCyrl-500.woff"), url("../fonts/MuseoSansCyrl-500.woff2");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "MuseoSansCyrl";
+  src: local('MuseoSansCyrl'), url("../fonts/MuseoSansCyrl-700.woff"), url("../fonts/MuseoSansCyrl-700.woff2");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "MuseoSansCyrl";
+  src: local('MuseoSansCyrl'), url("../fonts/MuseoSansCyrl-900.woff"), url("../fonts/MuseoSansCyrl-900.woff2");
+  font-weight: 900;
+  font-style: normal
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  src: local('Raleway'), url("../fonts/Raleway.ttf");
+  font-weight: 400;
+  font-style: normal
+}
