@@ -69,5 +69,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// связано с попапом
+
+ let promocode = document.querySelector('.promocode__input');
+ let submit = document.querySelector('.promocode__btn');
+ let valuePromo = promocode.value;
+
+submit.addEventListener('click', function() {
+  let valuePromo = promocode.value;
+  sendRequest('POST', requestURL, body).then();
+});
+
+// связано с запросом
+
+let requestURL = ''; // ссылка на url отправки запроса
+function sendRequest(method, url, body) {
+    return new Promise((resolve, reject) => {
+    
+    let xhr = new XMLHttpRequest(); // вызов
+    xhr.open(method, url); // говорим каким методом и куда будет отправляться запрос
+    
+    xhr.onload = () => {
+    
+      if (xhr.status >= 400) {
+        console.error(xhr.response) // нетворк ошибки
+      }
+      console.log(JSON.parse(xhr.response))
+    } // загружаем ответ от сервера, строка JSON.parse позволяет работать с полученными данными в изаначальном формате, а не в строке)
+    
+    xhr.send(JSON.stringify(body));
+    
+    xhr.onerror = () => {
+      console.log(xhr.response)
+    } // обработка ошибки 
+  })
+};
+
+let body = {
+  "promoCode": {
+    ids: {
+    value: valuePromo,
+    },
+    usedDateTimeUtc: "<Дата и время гашения промокода в формате YYYY-MM-DD hh:mm:ss.fff>"
+  }
+ 
+} // то что будет отправляться
+
+
 
 });
